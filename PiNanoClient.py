@@ -4,10 +4,10 @@ from socket import *
 from time import sleep
 from sense_hat import SenseHat
 
-serverName = '255.255.255.255'
-serverPort = 2023
+serverName = '255.255.255.255' #broadcast address when dont know the ip address
+serverPort = 2023 
 clientSocket = socket(AF_INET, SOCK_DGRAM)
-clientSocket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
+clientSocket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1) #broadcast socket , 1 means true
 
 
 sense = SenseHat()
